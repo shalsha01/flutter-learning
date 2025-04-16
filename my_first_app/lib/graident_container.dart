@@ -18,7 +18,10 @@ class GradientContainer extends StatelessWidget {
           end: endalignment,
         ),
       ),
-      child: const Mystyle(),
+      child:Image.asset(
+        "assets/images/dice-images/dice-1.png",
+        fit: BoxFit.cover,
+      ),
     );
   }
 }

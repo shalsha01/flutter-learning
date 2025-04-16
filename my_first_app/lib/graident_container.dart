@@ -19,7 +19,7 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child:Image.asset(
-        "assets/images/dice-images/dice-1.png",
+        "assets/images/dice-images/dice-1.png",width: 200,
         fit: BoxFit.cover,
       ),
     );

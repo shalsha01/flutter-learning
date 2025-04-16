@@ -20,7 +20,12 @@ void main() {
             ),
           ),
           child: Center(
-            child: GradientContainer(),
+            child: GradientContainer(
+              colors: [
+                Color.fromARGB(255, 13, 7, 134),
+                Color.fromARGB(243, 18, 0, 26),
+              ],
+            ),
           ),
           
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:developer';
 
 var startalignment = Alignment.topLeft;
 var endalignment = Alignment.bottomRight;
@@ -15,7 +16,7 @@ class _GradientContainerState extends State<GradientContainer> {
 var activeDiceimage = "assets/images/dice-images/dice-1.png";
 
    void rollDice() {
-    activeDiceimage= "assets/images/dice-images/dice-2.png";
+    log("Dice rolled");
    }
 
   @override

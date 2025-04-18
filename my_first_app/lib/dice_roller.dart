@@ -1,51 +1,46 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-class DiceRoller extends StatefulWidget{
+final randomizer = Random();
+
+class DiceRoller extends StatefulWidget {
   const DiceRoller({super.key});
   @override
   State<DiceRoller> createState() {
-   return _DiceRollerState();
-      
+    return _DiceRollerState();
   }
 }
 
-class _DiceRollerState extends State<DiceRoller>{
-  var activeDiceimage = "assets/images/dice-images/dice-5.png";
+class _DiceRollerState extends State<DiceRoller> {
+  var currentDiceRoll = 2;
 
-   void rollDice() {
-    var dicRole = Random().nextInt(6)+1; 
-    setState(() {
-      activeDiceimage="assets/images/dice-images/dice-$dicRole.png";
-      
-    });
-   }
+  void rollDice() {
+    currentDiceRoll = randomizer.nextInt(6) + 1;
+    setState(() {});
+  }
+
   @override
   Widget build(context) {
     return Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Image.asset(
-                activeDiceimage,
-                width: 200,
-                fit: BoxFit.cover,
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            TextButton(
-              onPressed: rollDice,
-              child: const Text(
-                "ROLL THE DICE",
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          ],
-        );
-
-
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 20),
+          child: Image.asset(
+            "assets/images/dice-images/dice-$currentDiceRoll.png",
+            width: 200,
+            fit: BoxFit.cover,
+          ),
+        ),
+        const SizedBox(height: 20),
+        TextButton(
+          onPressed: rollDice,
+          child: const Text(
+            "ROLL THE DICE",
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
+      ],
+    );
   }
 }

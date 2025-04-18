@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:my_first_app/styled_text.dart';
 var startalignment = Alignment.topLeft;
 var endalignment = Alignment.bottomRight;
 
@@ -18,9 +17,14 @@ class GradientContainer extends StatelessWidget {
           end: endalignment,
         ),
       ),
-      child:Image.asset(
-        "assets/images/dice-images/dice-1.png",width: 200,
-        fit: BoxFit.cover,
+      child: Center(
+        child:Column(children:[Image.asset(
+          "assets/images/dice-images/dice-3.png",
+          width: 200,
+          fit: BoxFit.cover,
+        ),
+        TextButton(onPressed:(){}, child:const Text("ROLL THE DICE",style: TextStyle(color: Colors.white),),),
+        ]),
       ),
     );
   }

@@ -12,6 +12,6 @@ State<QuestionsScreen> createState(){
 class _QuestionsScreenState extends State<QuestionsScreen> {
   @override
   Widget build(context) {
-	return const Text('Question Screen'); // Replace with your desired widget
+	return const Text('Questions Screen'); // Replace with your desired widget
   }
 }
